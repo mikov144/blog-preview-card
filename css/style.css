@@ -89,59 +89,83 @@ body {
   border-radius: 20px;
   box-shadow: 8px 8px 0 rgb(0, 0, 0);
 }
+@media screen and (max-width: 390px) {
+  .main__inner {
+    max-width: 327px;
+  }
+}
 .main__inner-img {
-  margin: 24px 0 24px;
+  margin: 24px 0;
   max-width: 336px;
   height: auto;
   border-radius: 10px;
 }
+@media screen and (max-width: 390px) {
+  .main__inner-img {
+    max-width: 280px;
+  }
+}
 .main__inner .description {
   width: 87%;
 }
-.main__inner .description .description__category {
+.main__inner .description__category {
   display: inline;
   padding: 4px 12px;
   border-radius: 4px;
   background-color: #F4D04E;
-  font-size: 14px;
+  font-size: clamp(12px, 0.73vw, 14px);
   font-weight: 800;
-  line-height: 21px;
+  line-height: clamp(18px, 1.1vw, 21px);
 }
-.main__inner .description .description__date {
+.main__inner .description__date {
   margin: 12px 0;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: clamp(12px, 0.73vw, 14px);
+  line-height: clamp(18px, 1.1vw, 21px);
 }
-.main__inner .description .description__title {
+.main__inner .description__title {
   margin-bottom: 12px;
-  font-size: 24px;
+  font-size: clamp(20px, 1.25vw, 24px);
   font-weight: 800;
-  line-height: 36px;
+  line-height: clamp(30px, 1.87vw, 36px);
+  cursor: pointer;
 }
-.main__inner .description .description__text {
+.main__inner .description__title:hover {
+  color: #F4D04E;
+}
+@media screen and (max-width: 390px) {
+  .main__inner .description__title:hover {
+    display: none;
+  }
+}
+.main__inner .description__text {
   margin-bottom: 24px;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: clamp(14px, 0.83vw, 16px);
+  line-height: clamp(21px, 1.25vw, 24px);
   color: #7F7F7F;
 }
-.main__inner .description .description__author {
+.main__inner .description__author {
   display: flex;
   width: 38%;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
 }
-.main__inner .description .description__author .description__author-img {
+@media screen and (max-width: 390px) {
+  .main__inner .description__author {
+    width: 46%;
+  }
+}
+.main__inner .description__author-img {
   max-width: 32px;
 }
-.main__inner .description .description__author .description__author-name {
+.main__inner .description__author-name {
   font-size: 14px;
   font-weight: 800;
   line-height: 21px;
+  cursor: pointer;
 }
-.main__attribution {
+.main__footer {
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
   font-size: 11px;
-  color: hsl(228, 45%, 44%);
 }/*# sourceMappingURL=style.css.map */
